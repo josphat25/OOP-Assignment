@@ -41,3 +41,43 @@ class Speedster(Superhero):
 ## Activity 2: Polymorphism Challenge! 🎭
 
 ### Create a program that includes animals or vehicles with the same action (like move()). However, make each class define move() differently (for example, Car.move() prints "Driving" 🚗, while Plane.move() prints "Flying" ✈️).
+Another Child Class: Telepath
+
+class Telepath(Superhero):
+
+    def __init__(self, name, city, mind_range):
+    
+        super().__init__(name, "Mind Control", city)
+        
+        self.mind_range = mind_range
+
+    def use_power(self):
+    
+        return f"{self.name} controls minds within {self.mind_range} meters!"
+
+        Polymorphism in Action:
+
+        heroes = [
+        
+    Speedster("FlashFire", "Metroville", 1200),
+    
+    Telepath("MindMist", "NeuroCity", 500),
+    
+    Superhero("IronStorm", "Steel Harbor", "Magnetic Manipulation")
+    
+]
+
+for hero in heroes:
+
+    print(hero.use_power())
+
+    Output:
+
+FlashFire zooms through Metroville at 1200 km/h!
+
+MindMist controls minds within 500 meters!
+
+IronStorm uses Magnetic Manipulation to fight crime!
+
+
+
